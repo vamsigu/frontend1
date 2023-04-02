@@ -1,3 +1,6 @@
 .list-group-item{
     padding: 5%;
+    background-color: bisque;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
 }
