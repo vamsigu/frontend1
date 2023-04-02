@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="continer text-center">
+    <h3>Welcome to Doctor Login Page!</h3>
+</div>
+<form (ngSubmit)="onlogin()" #f="ngForm">
+    <div class="list-group-item">
+        <label for="name">User Name</label>
+        <br>
+        <input class="form-control" type="text" id="name" [(ngModel)]="doctorlogindata.name" name="name" required>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input class="form-control" type="text" id="password" [(ngModel)]="doctorlogindata.password" name="password" required>
+        <br>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">sign in</button>
+    </div>
+</form>

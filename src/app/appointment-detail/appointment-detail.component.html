@@ -1,0 +1,45 @@
+<div class="list-group-item">
+    <div class="row" class="text-center">
+        <div class="col-md-12">
+            <h4>Your Appointment Details</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Paitent Name: {{appointment['pname']}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Age: {{appointment['age']}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Address: {{appointment['address']}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Doctor Name: {{appointment['dname']}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Specialization: {{appointment['specialization']}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Day: {{appointment['day']}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Time: {{appointment['slot']}}</h5>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="onedit()">Edit</button>
+    <button class="btn btn-danger" routerLink="/appointment">Cancel</button>
+</div>

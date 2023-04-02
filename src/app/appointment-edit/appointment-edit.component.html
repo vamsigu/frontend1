@@ -1,0 +1,53 @@
+<div class="list-group-item">
+    <form (ngSubmit)="update()" #f="ngForm">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="patient">Patient Name</label>
+                <input class="form-control" type="text" id="patient" [(ngModel)]="updatedata.pname" name="patient" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="age">Age</label>
+                <input class="form-control" type="text" id="age" [(ngModel)]="updatedata.age" name="AGE" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="address">Address</label>
+                <input class="form-control" type="text" id="address" [(ngModel)]="updatedata.address" name="ADDRESS" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="doctor">Doctor Name</label>
+                <input class="form-control" type="text" id="doctor" [(ngModel)]="updatedata.dname" name="doctor" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="speciality">Specialization</label>
+                <input class="form-control" type="text" id="speciality" [(ngModel)]="updatedata.specialization" name="speciality" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="day">Choose a Day:</label>
+                <input class="form-control" type="date" id="day" [(ngModel)]="updatedata.day" name="day" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="time">Choose time:</label>
+                <br>
+                <select id="time" class="form-control" [(ngModel)]="updatedata.slot" name="slot">
+                    <option value="">--Please choose an option--</option>
+                    <option *ngFor="let i of slots">{{ i }}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-danger" type="submit" >Update</button>
+        <button class="btn btn-primary" routerLink="/appointment">Cancel</button>
+    </form>
+</div>

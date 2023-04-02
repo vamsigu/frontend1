@@ -1,0 +1,53 @@
+<app-header class="header"></app-header>
+<div class="continer text-center">
+    <h3>Welcome to Paitent Register Page</h3>
+    <h3>Create Account</h3>
+</div>
+<div class="list-group-item">
+    <form (ngSubmit)="createpatient()" (click)="onIncrement()" #f="ngForm">
+        <div class="row">
+            <div class="col-md-10">
+                <label for="fname">Full Name</label>
+                <input class="form-control" type="text" id="fname" [(ngModel)]="data.name" name="fname" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <label for="email">Email</label>
+                <input class="form-control" type="text" id="email" [(ngModel)]="data.email" name="email" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <label for="number">Phone Number</label>
+                <input class="form-control" type="text" id="number" [(ngModel)]="data.number" name="number" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <label for="address">Address</label>
+                <textarea class="form-control" type="text" id="address" [(ngModel)]="data.address" name="address" required></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <label for="password"> Create Password</label>
+                <input class="form-control" type="text" id="password" [(ngModel)]="data.password" name="password" required>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Submit</button>
+        <div class="text-center signup">
+            Do you have an account ? <a routerLink="/login">Login</a>
+        </div>
+    </form>
+</div>
+
+
+
+
+

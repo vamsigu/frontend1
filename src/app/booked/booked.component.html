@@ -1,0 +1,44 @@
+<app-header3></app-header3>
+<div class="container text-center">
+    <h3>Payment Successfull</h3>
+    <p>You can download the appointment with the print button</p>
+</div>
+<div class="list-group-item">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Paitent: {{ appointments[0]['pname'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Age: {{ appointments[0]['age'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Address: {{ appointments[0]['address'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Doctor: {{ appointments[0]['dname'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Day: {{ appointments[0]['day'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Time: {{ appointments[0]['slot'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Amount Paid: 200</p>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="onprint()">Print</button>
+</div>

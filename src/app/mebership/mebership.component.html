@@ -1,0 +1,91 @@
+<app-header1></app-header1>
+<div *ngIf="!mode">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="list-group-item" id="card1">
+                    <div class="card m-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Silver Membership</h4>
+                            <p>Silver membership is ideal for patients who see their doctor only a few times a year, but always have access to them.</p>
+                            <p>Amount:Rs.850</p>
+                            <p>Benefits</p>
+                            <ul>
+                                <li><p>Special pricing on lab work</p></li>
+                                <li><p>Special pricing on in-office tests/labs</p></li>
+                                <li><p>Special pricing for in-office procedures</p></li>
+                                <li><p>Telehealth</p></li>
+                                <li><p>Same or Next Day Appointments</p></li>
+                            </ul>
+                            <button class="btn btn-primary" (click)="onbuy()">Buy</button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="list-group-item" id="card1">
+                    <div class="card m-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Gold Membership</h4>
+                            <p>The Gold Membership is ideal for people that are more health conscientious or have chronic medical conditions which requires monitoring on a frequent basis.</p>
+                            <p>Amount:Rs.1200</p>
+                            <p>Benefits</p>
+                            <ul>
+                                <li><p>Standard lab work</p></li>
+                                <li><p>EKG</p></li>
+                                <li><p>Rapid Strep test</p></li>
+                                <li><p>Extended appointment times</p></li>
+                            </ul>
+                            <button class="btn btn-primary" (click)="onbuy()">Buy</button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="list-group-item" id="card1">
+                    <div class="card m-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Platinum Membership</h4>
+                            <p class="card-text">For patients who want to have all the facilites of the hospital</p>
+                            <p>Amount:Rs.1500</p>
+                            <p>Benefits</p>
+                            <ul>
+                                <li><p>ALL lab work including: Rapid Strep and Influenza Testing</p></li>
+                                <li><p>ALL in-office testing: EKG, PFT, Hearing and Vascular Screening</p></li>
+                                <li><p>ALL in-office procedures</p></li>
+                                <li><p>X-rays</p></li>
+                            </ul>
+                            <button class="btn btn-primary" (click)="onbuy()">Buy</button>
+                        </div>
+                    </div>    
+                </div>
+            </div>      
+        </div>
+    </div>
+</div>
+
+<div class="list-group-item" *ngIf="mode" id="profile">
+    <h3 style="text-align: center;">Your Profile</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Name: {{ name }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Email: {{ email }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Phone Number: {{ number }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Address: {{ address }}</p>
+        </div>
+    </div>
+</div>
+
+

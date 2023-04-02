@@ -1,0 +1,31 @@
+<app-header3></app-header3>
+<div class="list-group-item">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Paitent: {{ appointments[0]['pname'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Doctor: {{ appointments[0]['dname'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Day: {{ appointments[0]['day'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Time: {{ appointments[0]['slot'] }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Fee: 200</p>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-success" (click)="onpay()">Pay</button>
+    <button class="btn btn-danger" (click)="oncancel()">Cancel</button>
+</div>

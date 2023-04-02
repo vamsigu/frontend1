@@ -1,0 +1,61 @@
+<div class="list-group-item">
+    <div class="row">
+        <div class="col-xs-12">
+            <form (ngSubmit)="onpayment()" (click)="onIncrement()" #f="ngForm">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="name">Patient Name</label>
+                        <input type="text" id="name" class="form-control" [(ngModel)]="appointmentdata.pname" name="pname" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" class="form-control" [(ngModel)]="appointmentdata.age" name="age" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="address">Address</label>
+                        <textarea type="text" class="form-control" rows="3" id="address" [(ngModel)]="appointmentdata.address"  name="address" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="dname">Doctor Name</label>
+                        <input type="text" id="dname" class="form-control" [(ngModel)]="appointmentdata.dname" name="dname" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="description">Specialization</label>
+                        <input type="text" id="description" class="form-control" [(ngModel)]="appointmentdata.specialization" name="description" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="day">Choose a Day:</label>
+                        <input class="form-control" type="date" id="day" [(ngModel)]="appointmentdata.day" name="day" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="time">Choose time:</label>
+                        <br>
+                        <select id="time" class="form-control" [(ngModel)]="appointmentdata.slot" name="time" required>
+                            <option value="">--Please choose an option--</option>
+                            <option *ngFor="let i of slots">{{ i }}</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-success" type="submit" [disabled]="!f.valid">Payment</button>
+                        <button type="submit" class="btn btn-danger" id="cancel" (click)="oncancel()">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<app-header3></app-header3>
+<div class="row">
+    <div class="col-md-5">
+        <app-appointment-list *ngFor="let appoint of appointments; let p=index" [appointment]="appoint" [index]="p"></app-appointment-list>
+    </div>
+    <div class="col-md-7">
+        <router-outlet></router-outlet>
+    </div>
+</div>

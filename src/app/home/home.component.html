@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container text-center">
+    <h1>Welcome to YOUHEAL Hospital</h1>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-5">
+        <app-doctor-list *ngFor="let doc of doctors" [doctor]="doc"></app-doctor-list>
+    </div>
+    <div class="col-md-7">
+        <router-outlet></router-outlet>
+    </div>
+</div>

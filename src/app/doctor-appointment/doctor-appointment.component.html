@@ -1,0 +1,23 @@
+<app-header2></app-header2>
+<div class="list-group-item">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+              <th>Appointment ID</th>
+              <th>Patient Name</th>
+              <th>Patient's Age</th>
+              <th>Day</th>
+              <th>Booked Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of doctorappointments">
+                <td>{{ i['appoint_id'] }}</td>
+                <td>{{ i['pname'] }}</td>
+                <td>{{ i['age']}}</td>
+                <td>{{ i['day'] }}</td>
+                <td>{{ i['slot'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
