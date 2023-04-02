@@ -15,4 +15,12 @@ export class AdminService {
   getadmin(id:number){
     return this.http.get(`http://localhost:90/admin/${id}`)
   }
+
+  getadminemail(email:string){
+    return this.http.get(`http://localhost:90/admins/${email}`)
+  }
+
+  getadminpassword(password:string){
+    return this.http.get(`http://localhost:90/Admin/${password}`)
+  }
 }

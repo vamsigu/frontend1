@@ -25,15 +25,32 @@ export class LoginComponent implements OnInit {
     this.login.getpaitents().subscribe(reponse=>{
       this.paitents = reponse
     })
+    
   }
   onlogin(){
     for(let i = 1; i <= this.paitents.length; i++){
        this.login.loginpage(i).subscribe(response=>{
-        if ((this.logindata.name === response['email']) && 
-          (this.logindata.password === response['password'])){
+        if ((this.logindata.name == response['email']) && 
+          (this.logindata.password == response['password'])){
         this.router.navigate(['membership'])
         this.service.patientemail=this.logindata.name}
        })
-     }
+    }
+    this.login.getpatientemail(this.logindata.name).subscribe(response=>{
+      console.log(response)
+    },
+    error=>{
+      if(error!=null){
+        alert("Invalid Username")
+      }
+    })
+    this.login.getpatientpassword(this.logindata.password).subscribe(response=>{
+      console.log(response)
+    },
+    error=>{
+      if(error!=null){
+        alert("Invalid password")
+      }
+    })
   }
 }

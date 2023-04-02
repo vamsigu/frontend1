@@ -33,7 +33,23 @@ export class DoctorLoginComponent {
         this.router.navigate(['profile'])}
        }) 
      }
-     this.service.doctoremail = this.doctorlogindata.name
+    this.service.doctoremail = this.doctorlogindata.name
+    this.login.getdoctoremail(this.doctorlogindata.name).subscribe(response=>{
+      console.log(response)
+    },
+    error=>{
+      if(error!=null){
+        alert("Invalid Username")
+      }
+    })
+    this.login.getdoctorpassword(this.doctorlogindata.password).subscribe(response=>{
+      console.log(response)
+    },
+    error=>{
+      if(error!=null){
+        alert("Invalid password")
+      }
+    })
   }
 
 }

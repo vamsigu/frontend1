@@ -2,4 +2,7 @@
     width: 30%;
     left: 35%;
     text-align: center;
+    background-color: bisque;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
 }

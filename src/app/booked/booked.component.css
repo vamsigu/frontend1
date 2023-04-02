@@ -1,4 +1,7 @@
 .list-group-item{
     width: 50%;
     left: 25%;
+    background-color: bisque;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
 }

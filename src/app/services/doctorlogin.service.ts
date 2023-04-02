@@ -19,5 +19,13 @@ export class DoctorloginService {
     return this.http.put(`http://localhost:60/doctors/${doc_id}`,data)
   }
 
+  getdoctoremail(email:string){
+    return this.http.get(`http://localhost:60/doctor/${email}`)
+  }
+
+  getdoctorpassword(password:string){
+    return this.http.get(`http://localhost:60/Doctors/${password}`)
+  }
+
   
 }

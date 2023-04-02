@@ -30,6 +30,22 @@ export class AdminLoginComponent implements OnInit{
           this.router.navigate(['admin'])
         }
       }
+      this.admin.getadminemail(this.logindata.name).subscribe(reponse=>{
+        console.log(reponse)
+      },
+      error=>{
+        if(error!=null){
+          alert("Invalid Username")
+        }
+      })
+      this.admin.getadminpassword(this.logindata.password).subscribe(response=>{
+        console.log(response)
+      },
+      error=>{
+        if(error!=null){
+          alert("Invalid password")
+        }
+      })
   }
 
 }

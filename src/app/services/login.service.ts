@@ -16,4 +16,12 @@ export class LoginService {
     return this.Http.get("http://localhost:8000/patients")
   }
 
+  getpatientemail(email:string){
+    return this.Http.get(`http://localhost:8000/Patients/${email}`)
+  }
+
+  getpatientpassword(password:string){
+    return this.Http.get(`http://localhost:8000/patient/${password}`)
+  }
+
 }
